@@ -1,0 +1,372 @@
+---
+title: "Bate papo sobre dados:"
+subtitle: "Os bastidores das ferramentas de analytics"
+# subtitle: ""
+author: "Antonio C. da Silva Júnior"
+# institute: ""
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+background-image: acsjuniorlogo.png
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+---
+
+background-image: url("../assets/img/acsjunior_hexlogo.png")
+background-position: top 15px right 15px
+background-size: 12%
+layout: true
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+MAIN_COLOUR <- "#4285f4"
+library(tidyverse)
+```
+
+
+---
+
+## Quem sou eu?
+
+### Antonio C. da Silva **Júnior**
+
+* **Cientista de dados:** Olist (2019)
+
+* **Analista de dados:** Hi Technologies (2018)
+
+* **Analista de planejamento:** Techint Engenharia (2015)
+
+<hr>
+
+* **Especialização em Data Science e Big Data:** UFPR
+
+* **Tecnologia em Análise e Desenvolvimento de Sistemas:** UNIP
+
+* **Técnico em Eletrônica:** IFSP
+
+.footnote[
+Mais detalhes: [https://acsjunior.com](https://acsjunior.com)
+] 
+
+---
+
+## Dado x informação
+
+.center[
+![datainfo](../assets/img/datainfo.png)
+]
+
+---
+
+
+## Banco de dados
+
+* Coleção organizada de dados armazenados eletronicamente
+
+* Representam aspectos da realidade
+
+.center[
+![](../assets/img/db1.png)
+]
+
+---
+
+
+## Tabela
+
+* Atributos (colunas)
+
+* Registros (linhas)
+
+.center[
+![](../assets/img/table1.png)
+]
+
+---
+
+
+## Chave primária
+
+* Identifica unicamente um registro, garantindo a integridade dos dados
+
+* Possibilita o relacionamento entre tabelas
+
+.center[
+![](../assets/img/pk1.png)
+]
+
+---
+
+
+## Relacionamentos
+
+* Associações entre tabelas
+
+* 1:1 (um para um)
+
+* 1:n (um para muitos)
+
+* n:n (muitos para muitos)
+
+---
+
+
+## Relacionamento 1:1
+
+* Cada registro da tabela A se relaciona a um ou nenhum registro da tabela B
+
+.center[
+![](../assets/img/rel1to1.png)
+]
+
+---
+
+
+## Relacionamento 1:n
+
+* Cada registro da tabela A relaciona com um, muitos ou nenhum registro da tabela B
+
+.center[
+![](../assets/img/rel1ton.png)
+]
+
+---
+
+
+## Relacionamento n:n
+
+* Cada registro, tanto da tabela A quanto da B, pode se relacionar a nenhum, a um ou a muitos registros da outra tabela
+
+* Necessita de uma tabela de associação
+
+.center[
+![](../assets/img/relnton.png)
+]
+
+---
+
+
+## Modelo relacional
+
+* Diminui a redundância e as chances de inconsistência nos dados
+
+* Foco em transação (inserção, atualização e exclusão de dados)
+
+* Desempenho ruim em consultas
+
+.center[
+![](../assets/img/relmodel.png)
+]
+
+---
+
+
+## Modelo dimensional
+
+* Foco em consultas
+
+* Dados redundantes, pelo fato de ser projetado para ter melhor desempenho que o modelo relacional
+
+* Modelagem estrela (Star Schema)
+
+* Modelagem floco de neve (Snowflake)
+
+---
+
+
+## Modelagem estrela
+
+* Tabelas **dimensões**:
+  + Representam as entidades no negócio (produto, pessoa, local, tempo...)
+  + Permitem filtros e agrupamentos
+
+* Tabela **fato**:
+  + Representa os eventos (vendas, temperaturas, resultados...)
+  + Permitem resumo (somatório, contagem, média...)
+
+---
+
+  
+## Modelagem estrela
+  
+.center[
+![](../assets/img/starschema.png)
+]
+
+---
+
+
+## Entendi...
+
+.center[
+![](../assets/img/nazare.jpg)
+]
+
+---
+
+
+## O Data Warehouse
+
+.center[
+![](../assets/img/dw.png)
+]
+
+---
+
+
+## Fontes de dados
+
+* Bancos de dados transacionais
+
+* Sistemas CRM: 
+  + Hubspot
+  + Pipedrive
+  + RD Station
+
+* Sistemas ERP: 
+ + SAP
+ + TOTVS
+ + Salesforce
+
+* Plataformas de web analytics: 
+ + Google Analytics
+ + Adobe Analytics
+
+* Planilhas eletrônicas e outros arquivos
+
+* Redes sociais, web scraping e dados externos
+
+---
+
+
+## O processo de ETL
+
+* **Extract:** Extração de diversas fontes (internas e externas)
+
+* **Transform:** Transformação, padronização, limpeza
+
+* **Load**: Estruturação e carregamento dos dados no DW (modelagem dimensional!)
+
+---
+
+## Business Intelligence - BI
+
+.center[
+![](../assets/img/bi.jpg)
+]
+
+.footnote[
+Fonte: [Qlik Blog](https://blog.qlik.com/bi-without-a-data-warehouse)
+]
+
+---
+
+
+## Tipos de variáveis
+
+* **Qualitativa (categóricas):**
+  + **Nominal:** ex.) sexo, estado civil
+  + **Ordinal:** ex.) tamanho (p, m, g), grau de escolaridade (1, 2, 3)
+  + Tabelas de frequências
+
+* **Quantitativa (numéricas):**
+  + **Discreta:** ex.) número de leads, número clientes
+  + **Contínua:** ex.) preço do produto, taxa de clientes por estado
+  
+* Nem toda variável representada por números é quantitativa!
+  + ex.) CPF, número de telefone
+  
+* É possível transformar uma variável quantitativa em qualitativa:
+  + ex.) idade > faixa etária
+  
+---
+
+
+## Tabela de frequências
+
+* Análise univariada (variáveis qualitativas ou quantitativas discretas)
+
+.center[
+![](../assets/img/freqtable.png)
+]
+
+---
+
+
+## Tabela de frequências - gráficos
+
+.center[
+![](../assets/img/freqtable_plot.png)
+]
+  
+---
+
+
+## Tabela cruzada
+
+* Análise bivariada (variáveis qualitativas ou quantitativas discretas)
+
+* Variáveis qualitativas e quantitativas discretas
+
+.center[
+![](../assets/img/crosstable.png)
+]
+
+---
+
+
+## Tabela cruzada - gráfico
+
+.center[
+![](../assets/img/crosstable_plot.png)
+]
+
+---
+
+
+## Estatísticas básicas
+
+.center[
+![](../assets/img/basicstats.png)
+]
+
+---
+
+## Quartis
+
+.center[
+![](../assets/img/quantiles.png)
+]
+
+---
+
+## Boxplot
+
+```{r, echo=FALSE, fig.align='center'}
+Curitiba <- c(1788, 1341, 1588, 1612, 1836, 1307, 1341, 1425, 1688, 1556, 2194, 1877)
+Santos <- c(3490, 767, 689, 655, 757, 987, 3456, 788, 767, 790, 3109, 3257)
+df <- data.frame(Curitiba, Santos)
+
+df <- df %>%
+  pivot_longer(cols = c("Curitiba", "Santos"))
+
+ggplot(df, aes(y = value, x = name)) +
+  geom_boxplot(fill = MAIN_COLOUR) +
+  theme_minimal() +
+  labs(x = "Faturamento mensal", y = "Filial", title = "Distribuição do faturamento em função da filial") +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=14, face="bold"),
+        title=element_text(size=16, face="bold"))
+```
+
+---
+
+## Gráfico de dispersão
+
+.center[
+![](../assets/img/scatterplot.png)
+]
