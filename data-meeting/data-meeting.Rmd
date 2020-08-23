@@ -207,6 +207,55 @@ class: inverse, center, middle
 
 ---
 
+## Resumo, agrupamento e filtro
+
+* **Resumo:** Somatório do faturamento
+* **Agrupamento:** por produto
+* **Filtro:** categoria = informática
+
+.center[
+![](../assets/img/group1.png)
+]
+
+---
+
+## Resumo, agrupamento e filtro
+
+* **Resumo:** Somatório do faturamento
+* **Agrupamento:** por produto
+* **Filtro:** categoria = informática
+
+.center[
+![](../assets/img/group2.png)
+]
+
+---
+
+
+## Resumo, agrupamento e filtro
+
+* **Resumo:** Somatório do faturamento
+* **Agrupamento:** por produto
+* **Filtro:** data entre os dias 2 e 5
+
+.center[
+![](../assets/img/group1.png)
+]
+
+---
+
+## Resumo, agrupamento e filtro
+
+* **Resumo:** Somatório do faturamento
+* **Agrupamento:** por produto
+* **Filtro:** data entre os dias 2 e 5
+
+.center[
+![](../assets/img/group3.png)
+]
+
+---
+
 
 ## Entendi...
 
@@ -387,16 +436,6 @@ ggplot(df, aes(x = Vendedor)) +
 
 ## Tabela de frequências - gráfico
 
-```{r, echo=FALSE}
-df_freq_plot %>%
-  kable(caption = "Tabela de frequências")
-```
-
----
-
-
-## Tabela de frequências - gráfico
-
 ```{r, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE}
 df_group <- df %>%
   group_by(Vendedor) %>%
@@ -419,6 +458,8 @@ ggplot(df_group, aes(x = "", y = f, fill = Vendedor)) +
 ---
 
 ## Tabela cruzada
+
+* Análise bivariada
 
 * Variáveis qualitativas e quantitativas discretas
 
@@ -746,6 +787,6 @@ class: inverse, center, middle
 * GitHub: [juniorssz](https://github.com/juniorssz)
 
 .footnote[
-Esta apresentação esta disponível em: [https://acsjunior.com/presentations/data_meeting.pdf](https://acsjunior.com/presentations/data_meeting.pdf) (PDF),
+Esta apresentação esta disponível em: [https://acsjunior.com/presentations/data_meeting.pdf](https://acsjunior.com/presentations/data_meeting.pdf) (PDF)
 [https://github.com/juniorssz/presentations/tree/master/data-meeting](https://github.com/juniorssz/presentations/tree/master/data-meeting) (código)
 ] 
