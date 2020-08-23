@@ -746,6 +746,6 @@ class: inverse, center, middle
 * GitHub: [juniorssz](https://github.com/juniorssz)
 
 .footnote[
-Esta apresentação esta disponível em: [https://acsjunior.com/presentations/data_meeting.html](https://acsjunior.com/presentations/data_meeting.html) (compilada),
+Esta apresentação esta disponível em: [https://acsjunior.com/presentations/data_meeting.pdf](https://acsjunior.com/presentations/data_meeting.pdf) (compilada),
 [https://github.com/juniorssz/presentations/tree/master/data-meeting](https://github.com/juniorssz/presentations/tree/master/data-meeting) (código)
 ] 
