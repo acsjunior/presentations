@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Bate papo sobre dados:</title>
+    <title>Bate papo sobre dados</title>
     <meta charset="utf-8" />
     <meta name="author" content="Antonio C. da Silva Júnior" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -11,10 +11,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Bate papo sobre dados:
-## Os bastidores das ferramentas de analytics
+# Bate papo sobre dados
 ### Antonio C. da Silva Júnior
-### 21/08/2020
+### 23/08/2020
 
 ---
 
@@ -53,6 +52,11 @@ Mais detalhes: [https://acsjunior.com](https://acsjunior.com)
 
 ---
 
+class: inverse, center, middle
+
+# Uma visão geral sobre banco de dados
+
+---
 ## Dado x informação
 
 .center[
@@ -264,6 +268,11 @@ Fonte: [Qlik Blog](https://blog.qlik.com/bi-without-a-data-warehouse)
 
 ---
 
+class: inverse, center, middle
+
+# Um pouco de estatística
+
+---
 
 ## Tipos de variáveis
 
@@ -284,35 +293,367 @@ Fonte: [Qlik Blog](https://blog.qlik.com/bi-without-a-data-warehouse)
   
 ---
 
+## Tabela de frequências
+
+* Análise univariada
+
+* Variáveis qualitativas e quantitativas discretas
+
+.pull-left[
+&lt;table&gt;
+&lt;caption&gt;Base de dados&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Pedido &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Data &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V001 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 01/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V002 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 01/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V003 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 02/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V004 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 02/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V005 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 03/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V006 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 03/01/2020 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table&gt;
+&lt;caption&gt;Tabela de frequências&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Absoluta &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Relativa &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
 
 ## Tabela de frequências
 
-* Análise univariada (variáveis qualitativas ou quantitativas discretas)
+* Variáveis quantitativas contínuas
 
-.center[
-![](../assets/img/freqtable.png)
+.pull-left[
+&lt;table&gt;
+&lt;caption&gt;Base de dados&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Produto &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Preço &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P001 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 120 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P002 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 240 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P003 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 410 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P004 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 220 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 350 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P006 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 520 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P007 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 180 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P008 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 600 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; P009 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 425 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table&gt;
+&lt;caption&gt;Tabela de frequências&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Faixa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Absoluta &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Relativa &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 0 ~ 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 200 ~ 400 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 400 ~ 600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.67 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ]
 
 ---
 
 
-## Tabela de frequências - gráficos
+## Tabela de frequências - gráfico
 
-.center[
-![](../assets/img/freqtable_plot.png)
-]
-  
+&lt;table&gt;
+&lt;caption&gt;Tabela de frequências&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Absoluta &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Relativa &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+## Tabela de frequências - gráfico
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+## Tabela de frequências - gráfico
+
+&lt;table&gt;
+&lt;caption&gt;Tabela de frequências&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Absoluta &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Relativa &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.17 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.33 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+## Tabela de frequências - gráfico
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Tabela cruzada
+
+* Variáveis qualitativas e quantitativas discretas
+
 ---
 
 
 ## Tabela cruzada
 
-* Análise bivariada (variáveis qualitativas ou quantitativas discretas)
+.pull-left[
+&lt;table&gt;
+&lt;caption&gt;Base de dados&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Pedido &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Categoria &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V001 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Eletrônicos &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V002 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V003 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Eletrônicos &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V004 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V005 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V006 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Eletrônicos &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V007 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Eletrônicos &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V008 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Eletrônicos &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V009 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V010 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V011 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; V012 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Informática &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
 
-* Variáveis qualitativas e quantitativas discretas
-
-.center[
-![](../assets/img/crosstable.png)
+.pull-right[
+&lt;table&gt;
+&lt;caption&gt;Tabela cruzada&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Eletrônicos &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Informática &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ]
 
 ---
@@ -320,43 +661,602 @@ Fonte: [Qlik Blog](https://blog.qlik.com/bi-without-a-data-warehouse)
 
 ## Tabela cruzada - gráfico
 
-.center[
-![](../assets/img/crosstable_plot.png)
-]
+&lt;table&gt;
+&lt;caption&gt;Tabela cruzada&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Vendedor &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Eletrônicos &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Informática &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Donatelo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leonardo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Raphael &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+## Tabela cruzada - gráfico
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+
 
 ---
 
 
 ## Estatísticas básicas
 
-.center[
-![](../assets/img/basicstats.png)
+.pull-left[
+&lt;table&gt;
+&lt;caption&gt;Faturamento mensal&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Mês &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Curitiba &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Santos &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Janeiro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1768 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3490 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Fevereiro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1341 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 767 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Março &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1588 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 689 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Abril &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1612 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 655 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Maio &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1836 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 757 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Junho &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1307 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 987 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Julho &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1341 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3456 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Agosto &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1425 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 788 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Setembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1688 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 767 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Outubro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1556 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 790 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Novembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2194 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3109 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Dezembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1877 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3257 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table&gt;
+&lt;caption&gt;Estatísticas básicas&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Estatísticas &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Curitiba &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Santos &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Média &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1627.75 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1626.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mediana &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1600.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 789.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Moda &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1341.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 767.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Máximo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2194.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3490.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mínimo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1307.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 655.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Amplitude &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 887.00 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2835.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Variância &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 69531.66 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1594912.73 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Desvio Padrão &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 263.69 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1262.90 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Coef. Variação &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.16 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.78 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
 ]
 
 ---
 
 ## Quartis
 
-.center[
-![](../assets/img/quantiles.png)
+.pull-left[
+&lt;table&gt;
+&lt;caption&gt;Faturamento mensal&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Mês &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Curitiba &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Santos &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Janeiro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1768 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3490 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Fevereiro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1341 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 767 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Março &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1588 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 689 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Abril &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1612 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 655 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Maio &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1836 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 757 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Junho &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1307 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 987 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Julho &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1341 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3456 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Agosto &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1425 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 788 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Setembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1688 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 767 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Outubro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1556 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 790 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Novembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2194 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3109 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Dezembro &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1877 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3257 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+&lt;table&gt;
+&lt;caption&gt;Quartis&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Quartis &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Curitiba &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Santos &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Mínimo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1307 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 655.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Q1 (25%) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1404 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 764.5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Q2 (50%) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 789.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Q3 (75%) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1785 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3146.0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Máximo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2194 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3490.0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 ]
 
 ---
 
 ## Boxplot
 
-&lt;img src="data-meeting_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Gráfico de dispersão
 
-.center[
-![](../assets/img/scatterplot.png)
+&lt;table&gt;
+&lt;caption&gt;Base de dados&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Vendas &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Temperatura &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 27.8 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 145 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 25.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23.1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 133 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18.5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13.9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 97 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 111 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 121 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 17.5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 153 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 22.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 151 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.9 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Gráfico de dispersão
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Gráfico de dispersão
+
+&lt;table&gt;
+&lt;caption&gt;Dados sobre íris&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Compr. Sépala &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Larg. Sépala &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Compr. Pétala &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Larg. Pétala &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Espécie &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 68 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; versicolor &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 129 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; virginica &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 43 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 51 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; versicolor &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; versicolor &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 21 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; virginica &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 74 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; versicolor &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+## Gráfico de dispersão
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Gráfico de dispersão
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Gráfico de linhas
+
+&lt;table&gt;
+&lt;caption&gt;Peso médio em função da altura&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Sexo &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Altura &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Peso &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Masculino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 169 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 78.46 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Feminino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 76.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Feminino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 137 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.35 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Feminino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 170 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 70.81 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Masculino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 188 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98.69 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Feminino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 179 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 82.20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Feminino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50.16 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Masculino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 183 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 92.99 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Masculino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 68.29 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Masculino &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 152 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 58.87 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Gráfico de linhas
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+## Gráfico de linhas
+
+&lt;img src="data-meeting_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# Considerações finais
+
+---
+
+## Pontos principais
+
+* Compreender como os dados se relacionam no negócio que estamos inseridos é fundamental;
+--
+
+* Antes de partir para a análise, ter bem definido quais perguntas desejamos responder (quem não sabe pra onde vai, qualquer caminho serve);
+
+--
+* Olhar somente para a média de forma isolada pode nos levar a conclusões inadequadas;
+
+--
+* Gráficos são fáceis de criar, independentemente da ferramenta, desde que os dados estejam no formato conveniente.
+
+---
+
+## Obrigado!
+
+### Contatos:
+
+* E-mail: [juniorssz@gmail.com](mailto:juniorssz@gmail.com?Subject=Contato)
+* Página pessoal: [https://acsjunior.com](https://acsjunior.com)
+* Linkedin: [in/juniorssz/](https://www.linkedin.com/in/juniorssz/)
+* GitHub: [juniorssz](https://github.com/juniorssz)
+
+.footnote[
+Esta apresentação esta disponível em: [https://acsjunior.com/presentations/data_meeting.html](https://acsjunior.com/presentations/data_meeting.html) (compilada),
+[https://github.com/juniorssz/presentations/tree/master/data-meeting](https://github.com/juniorssz/presentations/tree/master/data-meeting) (código)
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="libs/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
